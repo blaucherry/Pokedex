@@ -2,7 +2,7 @@
 Vista Web que muestra si un pokemon ya pago su consulta con la Enfermera Joy
 # 🧾 Consulta de Citas Pokémon con Service Layer
 
-Este proyecto es una **vista web simulada** que se conecta a una base de datos para verificar si un Pokémon (o paciente) **ha pagado su cita médica con la Enfermera Joy**.  
+Este proyecto es una **vista web simulada** que se conecta a una base de datos para verificar si un Pokémon  **ha pagado su cita médica con la Enfermera Joy**.  
 Se trata de una demostración que **simula la conexión a un Service Layer y una base de datos**, enfocándose en la estructura de frontend-backend sin exponer datos reales.
 
 ---
