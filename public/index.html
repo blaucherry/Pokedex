@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Control de Citas</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script>
+        async function fetchCita() {
+            const identificador = document.getElementById('citaId').value;
+            const response = await fetch(`/api/citas/${identificador}`);
+            const data = await response.json();
+
+            if (response.ok) {
+                document.getElementById('resultado').innerHTML = `
+                    <h3>Detalles de la Cita</h3>
+                    <p><strong>Identificador:</strong> ${data.identificador}</p>
+                    <p><strong>Fecha:</strong> ${data.fecha}</p>
+                    <p><strong>Hora:</strong> ${data.hora}</p>
+                    <p><strong>Servicio:</strong> ${data.servicio}</p>
+                    <p><strong>Número de Recibo de Pago:</strong> ${data.reciboPago}</p>
+                    <p><strong>Estado:</strong> ${data.estado}</p>
+                    <p><strong>Pagado:</strong> ${data.pagado}</p>
+                `;
+            } else {
+                document.getElementById('resultado').innerHTML = `<p class="mensaje">${data.mensaje}</p>`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <img src="LogoConde.png" alt="Logo" class="logo"> 
+            <h1>Panel de verificación de citas</h1>
+            <p>Consulta rápida del estado de pago y folio de las citas de pacientes.</p>
+        </header>
+        <div class="form-group">
+            <input type="text" id="citaId" placeholder="Ingrese el CUC de la cita" required>
+            <button onclick="fetchCita()">Buscar</button>
+        </div>
+        <div id="resultado"></div> 
+    </div>
+</body>
+</html>

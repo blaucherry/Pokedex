@@ -1,0 +1,132 @@
+/* Fuente base */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7fa; /* Color de fondo suave */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 500px; /* Ancho máximo del contenedor */
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 350px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px; /* Tamaño de fuente más grande */
+    color: #333; /* Color de texto oscuro */
+}
+
+header p {
+    color: #777; /* Color de texto más claro */
+    font-size: 16px; /* Tamaño de fuente más grande */
+}
+
+/* Estilos del formulario */
+.form-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    outline: none;
+    font-size: 16px; /* Tamaño de fuente más grande */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="text"]:focus {
+    border-color: #008CBA; /* Color de borde al enfocar */
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #008CBA; /* Color de fondo del botón */
+    color: white;
+    font-size: 16px; /* Tamaño de fuente más grande */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+button:hover {
+    background-color: #007B9E; /* Color de fondo al pasar el mouse */
+}
+
+/* Mensaje de error */
+.mensaje {
+    color: #e74c3c; /* Color rojo para mensajes de error */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Tabla de resultados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white; /* Fondo blanco para la tabla */
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio superior */
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #eee; /* Borde inferior gris claro */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f4f8; /* Color de fondo para encabezados */
+    color: #333; /* Color de texto oscuro */
+    font-weight: 600;
+}
+
+td {
+    color: #555; /* Color de texto gris oscuro */
+}
+
+table tr:last-child td {
+    border-bottom: none; /* Sin borde en la última fila */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    input[type="text"] {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-bottom: 10px; /* Espacio inferior */
+    }
+
+    button {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
